@@ -102,10 +102,8 @@ for (let i = 0; i < coins.length; i++) {
 
     console.log(`${coins[i]} wrapper: ${needWrapper}`);
     console.log(`Remaining of ${coins[i]}: ${coinLeft}`);
-    console.log(`${coins[i]} value of total: ${totalCoinValue}`);
-
-
+    console.log(`${coins[i]} value of total: ${USDollar.format(totalCoinValue)}`);
 
 }
 
-console.log(`Total value of Coins: ${totalValue}`);
+console.log(`Total value of Coins: ${USDollar.format(totalValue)}`);
