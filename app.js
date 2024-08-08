@@ -36,7 +36,7 @@ let totalQuartersValue   = quarters * quartersTotal;
 //TODO Calculate the combined total value of all coins.
 let totalValue      = totalPenniesValue + totalNickelsValue + totalDimesValue + totalQuartersValue;
 //TEST THE TOTAL
-console.log(`Total of all coins: ${USDollar.format(totalValue)}`);
+//console.log(`Total of all coins: ${USDollar.format(totalValue)}`);
 
 //*  Sort Coins into Wrappers:
 //TODO Use the standard capacity for each type of coin wrapper:
@@ -58,14 +58,17 @@ let quartWrapper    = Math.floor(quartersTotal / qWrapper);
 
 //TODO Calculate the remaining coins that do not fill a wrapper completely.
 let penniesLeft     = penniesTotal % pWrapper;
-let nickelsLeft     = nickelsTotal % pWrapper;
-let dimesLeft       = dimesTotal % pWrapper;
-let quartersLeft    = quartersTotal % pWrapper;
+let nickelsLeft     = nickelsTotal % nWrapper;
+let dimesLeft       = dimesTotal % dWrapper;
+let quartersLeft    = quartersTotal % qWrapper;
 
 
 //* Output Results:
 //TODO Use console.log to display the number of wrappers needed for each type of coin.
-
+console.log(`Wrapper needed for pennies: ${penniesLeft}`);
+console.log(`Wrapper needed for Nickels: ${nickelsLeft}`);
+console.log(`Wrapper needed for Dimes: ${dimesLeft}`);
+console.log(`Wrapper needed for Quarters: ${quartersLeft}`);
 
 //TODO Use console.log to display the total amount in dollars.
 console.log(`Total of all coins: ${USDollar.format(totalValue)}`);
