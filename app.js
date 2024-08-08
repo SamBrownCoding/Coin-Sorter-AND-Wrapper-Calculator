@@ -86,3 +86,26 @@ console.log(`Total of all coins: ${USDollar.format(totalValue)}`);
 
 //ARRAY and For LOOPS
 
+const coins = ["pennies", "nickels", "dimes", "quarters"];
+const coinValue = [0.01, 0.05, 0.10, 0.25];
+const coinTotal = [300, 300, 300, 300];
+const coinWrapper = [50, 40, 50, 40];
+let totalValue = 0;
+
+for (let i = 0; i < coins.length; i++) {
+    totalValue += coinValue[i] * coinTotal[i];
+
+    let needWrapper = Math.floor(coinTotal[i] / coinWrapper[i]);
+    let coinLeft = coinTotal[i] % coinWrapper[i];
+    let totalCoinValue = coinValue[i] * coinTotal[i];
+
+
+    console.log(`${coins[i]} wrapper: ${needWrapper}`);
+    console.log(`Remaining of ${coins[i]}: ${coinLeft}`);
+    console.log(`${coins[i]} value of total: ${totalCoinValue}`);
+
+
+
+}
+
+console.log(`Total value of Coins: ${totalValue}`);
